@@ -1,0 +1,2317 @@
+[
+    {
+        "id": "fa85486f10d39407",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "85eda2fd6510b06d",
+        "type": "tab",
+        "label": "Flow 3",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "c2b9beddf77ce65a",
+        "type": "mqtt-broker",
+        "name": "Mosquitto",
+        "broker": "127.0.0.1",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "33738db3942161b9",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "127.0.0.1",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "fbe6b3fc9fa399f7",
+        "type": "mqtt-broker",
+        "name": "Humidity",
+        "broker": "127.0.0.1",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "da3b5ee23d1756e0",
+        "type": "mqtt-broker",
+        "name": "Actionnaire",
+        "broker": "127.0.0.1:1885",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "5f3322efbef2d286",
+        "type": "inject",
+        "z": "fa85486f10d39407",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "20",
+        "payloadType": "num",
+        "x": 70,
+        "y": 800,
+        "wires": [
+            [
+                "a58b41bbc982711b",
+                "fcceb5e8a256506c",
+                "80b4d1278a734ce0",
+                "ce56dc4841fc21ed",
+                "00c2e66db020101d",
+                "277df34aa7984e72",
+                "fe0eadde14f6a542",
+                "8709c18490f6e4c4",
+                "54dd6a03d2f1d863",
+                "d340679ef16d50b2",
+                "d1c68131d21fb517",
+                "641a59b55be86a43"
+            ]
+        ]
+    },
+    {
+        "id": "985b4e42a3088207",
+        "type": "delay",
+        "z": "fa85486f10d39407",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 440,
+        "y": 120,
+        "wires": [
+            [
+                "3bfe888f48554576"
+            ]
+        ]
+    },
+    {
+        "id": "11997c0bf23960dc",
+        "type": "mqtt out",
+        "z": "fa85486f10d39407",
+        "name": "",
+        "topic": "Temperature1",
+        "qos": "",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "33738db3942161b9",
+        "x": 660,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "aa34065cf151599e",
+        "type": "function",
+        "z": "fa85486f10d39407",
+        "name": "Climatiseur 1",
+        "func": "\n\n// Vérifie si le JSON contient les propriétés \"prod\" et \"clim\"\nif (msg.payload == \"marche\") {\n\n\n    msg.payload = \"Clim 1 marche\";\n    return msg;\n} else if (msg.payload == \"ne marche pas\") {\n    msg.payload = \"Clim 1 ne marche pas\";\n    return msg;\n}\n\nelse\n{ return null;} \n\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1910,
+        "y": 300,
+        "wires": [
+            [
+                "d40554d572e40123"
+            ]
+        ]
+    },
+    {
+        "id": "ba723e65bf8a3acb",
+        "type": "function",
+        "z": "fa85486f10d39407",
+        "name": "Humidity 1",
+        "func": "\n\n\nconst MAX = 70;\nconst MIN = 30;\nconst SENSITIVITY = 1;\nlet T = msg.payload;\n// Function to update the temperature value\n\n    let newT = Math.floor(Math.random() * (MAX - MIN + 1)) + MIN;\n\n    if (T >= newT - SENSITIVITY) {\n        T -= SENSITIVITY ;\n    } else if (T <= newT - SENSITIVITY) {\n        T += SENSITIVITY;\n    }\n\n    // Update the message payload with the new temperature value\n    msg.payload = T;\n\n\n\n\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 260,
+        "wires": [
+            [
+                "6b64bb579c062fe9",
+                "a6439e9a308477f8"
+            ]
+        ]
+    },
+    {
+        "id": "6b64bb579c062fe9",
+        "type": "delay",
+        "z": "fa85486f10d39407",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 440,
+        "y": 220,
+        "wires": [
+            [
+                "ba723e65bf8a3acb"
+            ]
+        ]
+    },
+    {
+        "id": "a6439e9a308477f8",
+        "type": "mqtt out",
+        "z": "fa85486f10d39407",
+        "name": "",
+        "topic": "Humidity1",
+        "qos": "",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "33738db3942161b9",
+        "x": 680,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "ec6ebba7aee1fd3c",
+        "type": "function",
+        "z": "fa85486f10d39407",
+        "name": "Pressure1",
+        "func": "\n\n\nconst MAX =1.3;\nconst MIN =0.9;\nconst SENSITIVITY = 0.05;\nlet T = msg.payload;\n// Function to update the temperature value\n\n    let newT = Math.random() * (MAX - MIN )+ MIN;\n\n    if (T >= newT - SENSITIVITY) {\n        T -= SENSITIVITY/5 ;\n    } else if (T <= newT - SENSITIVITY) {\n        T += SENSITIVITY /5;\n    }\n\n    // Update the message payload with the new temperature value\n    msg.payload = T;\n\n\n\n\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 360,
+        "wires": [
+            [
+                "ee55812a5bd9d744",
+                "b3b6434f8cc0338e"
+            ]
+        ]
+    },
+    {
+        "id": "ee55812a5bd9d744",
+        "type": "delay",
+        "z": "fa85486f10d39407",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 440,
+        "y": 320,
+        "wires": [
+            [
+                "ec6ebba7aee1fd3c"
+            ]
+        ]
+    },
+    {
+        "id": "b3b6434f8cc0338e",
+        "type": "mqtt out",
+        "z": "fa85486f10d39407",
+        "name": "Pressure1",
+        "topic": "Pressure1",
+        "qos": "",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "33738db3942161b9",
+        "x": 670,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "a58b41bbc982711b",
+        "type": "range",
+        "z": "fa85486f10d39407",
+        "minin": "0",
+        "maxin": "20",
+        "minout": "0",
+        "maxout": "100",
+        "action": "scale",
+        "round": false,
+        "property": "payload",
+        "name": "",
+        "x": 280,
+        "y": 260,
+        "wires": [
+            [
+                "ba723e65bf8a3acb"
+            ]
+        ]
+    },
+    {
+        "id": "fcceb5e8a256506c",
+        "type": "range",
+        "z": "fa85486f10d39407",
+        "minin": "0",
+        "maxin": "20",
+        "minout": "5",
+        "maxout": "15",
+        "action": "scale",
+        "round": false,
+        "property": "payload",
+        "name": "",
+        "x": 270,
+        "y": 160,
+        "wires": [
+            [
+                "3bfe888f48554576"
+            ]
+        ]
+    },
+    {
+        "id": "80b4d1278a734ce0",
+        "type": "range",
+        "z": "fa85486f10d39407",
+        "minin": "0",
+        "maxin": "20",
+        "minout": "1",
+        "maxout": "1",
+        "action": "scale",
+        "round": false,
+        "property": "payload",
+        "name": "",
+        "x": 270,
+        "y": 360,
+        "wires": [
+            [
+                "ec6ebba7aee1fd3c"
+            ]
+        ]
+    },
+    {
+        "id": "3bfe888f48554576",
+        "type": "function",
+        "z": "fa85486f10d39407",
+        "name": "Temperature 1",
+        "func": "\n\n\nconst MAX_TEMP = 15;\nconst MIN_TEMP = 6;\nconst SENSITIVITY = 0.5;\nlet T = msg.payload;\n// Function to update the temperature value\n\n    let newT = Math.floor(Math.random() * (MAX_TEMP - MIN_TEMP + 1)) + MIN_TEMP;\n\n    if (T >= newT - SENSITIVITY) {\n        T -= SENSITIVITY * 0.5;\n    } else if (T <= newT - SENSITIVITY) {\n        T += SENSITIVITY * 0.5;\n    }\n\n    // Update the message payload with the new temperature value\n    msg.payload = T;\n\n\n\n\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 160,
+        "wires": [
+            [
+                "985b4e42a3088207",
+                "11997c0bf23960dc",
+                "f7965ac19c08edd8"
+            ]
+        ]
+    },
+    {
+        "id": "532277d302ec568c",
+        "type": "function",
+        "z": "fa85486f10d39407",
+        "name": "Controller 1",
+        "func": "// Récupération des états et initialisation\nlet zones_humidite_superieure_60 = context.get(\"zones_humidite_superieure_60\") || 0;\nlet production_status = context.get(\"production_status\") || \"on\"; // Production par défaut en marche\n\n// Récupération de l'état actuel des climatiseurs\nlet climStatuses = {\n    zone1: context.get(\"climatisation_zone1\") || \"off\",\n    zone2: context.get(\"climatisation_zone2\") || \"off\",\n    zone3: context.get(\"climatisation_zone3\") || \"off\",\n    zone4: context.get(\"climatisation_zone4\") || \"off\"\n};\n\n// Fonction pour mettre à jour l'état d'un climatiseur\nfunction updateClimStatus(zone, newState) {\n    let currentState = climStatuses[`zone${zone}`];\n    if (currentState !== newState) {\n        climStatuses[`zone${zone}`] = newState;\n        context.set(`climatisation_zone${zone}`, newState);\n        return { topic: `clim${zone}`, payload: newState }; // Retourne le message à envoyer\n    }\n    return null; // Pas de changement d'état\n}\n\n// Fonction pour arrêter la production dans une zone spécifique\nfunction stopProductionInZone(zone) {\n    production_status = \"off\"; // Production arrêtée\n    context.set(\"production_status\", \"off\");\n    return { topic: `prod${zone}`, payload: \"off\" }; // Retourne le message pour arrêter la production dans la zone\n}\n\n// Fonction pour arrêter la production dans toutes les zones\nfunction stopAllProduction() {\n    production_status = \"off\"; // Production arrêtée\n    context.set(\"production_status\", \"off\");\n    return { topic: \"production\", payload: \"off\" }; // Retourne le message pour arrêter la production globale\n}\n\n// Traitement du message\nif (msg.topic.startsWith(\"Temperature\")) {\n    let zone = msg.topic.replace(\"Temperature\", \"\");\n    let temperature = msg.payload;\n\n    if (temperature >= 12) {\n        return updateClimStatus(zone, \"on\"); // Allume le climatiseur\n    } else if (temperature <= 8) {\n        return updateClimStatus(zone, \"off\"); // Éteint le climatiseur\n    }\n} else if (msg.topic.startsWith(\"Humidity\")) {\n    let zone = msg.topic.replace(\"Humidity\", \"\");\n    let humidity = msg.payload;\n\n    if (humidity > 60) {\n        zones_humidite_superieure_60++;\n        context.set(\"zones_humidite_superieure_60\", zones_humidite_superieure_60);\n\n        // Si deux zones dépassent 60% d'humidité, arrêter la production de toutes les zones\n        if (zones_humidite_superieure_60 >= 2) {\n            return stopAllProduction();\n        }\n    } else if (humidity > 40) {\n        return updateClimStatus(zone, \"on\"); // Active le climatiseur si humidité > 40%\n    }\n} else if (msg.topic.startsWith(\"Pressure\")) {\n    let zone = msg.topic.replace(\"Pressure\", \"\"); // Récupérer le numéro de zone\n    let pressure = msg.payload;\n\n    if (pressure > 1.2) {\n        return stopProductionInZone(zone); // Arrête la production dans la zone si pression > 1.2 bar\n    }\n}\n\nreturn null; // Aucune action si aucune condition n'est remplie\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1250,
+        "y": 780,
+        "wires": [
+            [
+                "36590e5c969a69bd",
+                "fb55f65ba41c428b"
+            ]
+        ]
+    },
+    {
+        "id": "1f8927b0aae92e08",
+        "type": "delay",
+        "z": "fa85486f10d39407",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 440,
+        "y": 480,
+        "wires": [
+            [
+                "ca6d3d322cac72b5"
+            ]
+        ]
+    },
+    {
+        "id": "fef682429e56f337",
+        "type": "mqtt out",
+        "z": "fa85486f10d39407",
+        "name": "Temperature2",
+        "topic": "Temperature2",
+        "qos": "",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "33738db3942161b9",
+        "x": 660,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "55272c66d089c9b5",
+        "type": "function",
+        "z": "fa85486f10d39407",
+        "name": "Humidity 1",
+        "func": "\n\n\nconst MAX = 70;\nconst MIN = 30;\nconst SENSITIVITY = 1;\nlet T = msg.payload;\n// Function to update the temperature value\n\n    let newT = Math.floor(Math.random() * (MAX - MIN + 1)) + MIN;\n\n    if (T >= newT - SENSITIVITY) {\n        T -= SENSITIVITY ;\n    } else if (T <= newT - SENSITIVITY) {\n        T += SENSITIVITY;\n    }\n\n    // Update the message payload with the new temperature value\n    msg.payload = T;\n\n\n\n\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 620,
+        "wires": [
+            [
+                "8a46e6fab07ac22c",
+                "38e29747b915417f"
+            ]
+        ]
+    },
+    {
+        "id": "8a46e6fab07ac22c",
+        "type": "delay",
+        "z": "fa85486f10d39407",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 440,
+        "y": 580,
+        "wires": [
+            [
+                "55272c66d089c9b5"
+            ]
+        ]
+    },
+    {
+        "id": "38e29747b915417f",
+        "type": "mqtt out",
+        "z": "fa85486f10d39407",
+        "name": "Humidity2",
+        "topic": "Humidity2",
+        "qos": "",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "33738db3942161b9",
+        "x": 680,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "6a54569654a3444b",
+        "type": "function",
+        "z": "fa85486f10d39407",
+        "name": "Pressure2",
+        "func": "\n\n\nconst MAX =1.3;\nconst MIN =0.9;\nconst SENSITIVITY = 0.05;\nlet T = msg.payload;\n// Function to update the temperature value\n\n    let newT = Math.random() * (MAX - MIN )+ MIN;\n\n    if (T >= newT - SENSITIVITY) {\n        T -= SENSITIVITY/5 ;\n    } else if (T <= newT - SENSITIVITY) {\n        T += SENSITIVITY /5;\n    }\n\n    // Update the message payload with the new temperature value\n    msg.payload = T;\n\n\n\n\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 720,
+        "wires": [
+            [
+                "aa21f0510d0c48bd",
+                "fb0f7897ee8accb9"
+            ]
+        ]
+    },
+    {
+        "id": "aa21f0510d0c48bd",
+        "type": "delay",
+        "z": "fa85486f10d39407",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 440,
+        "y": 680,
+        "wires": [
+            [
+                "6a54569654a3444b"
+            ]
+        ]
+    },
+    {
+        "id": "fb0f7897ee8accb9",
+        "type": "mqtt out",
+        "z": "fa85486f10d39407",
+        "name": "Pressure2",
+        "topic": "Pressure2",
+        "qos": "",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "33738db3942161b9",
+        "x": 670,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "00c2e66db020101d",
+        "type": "range",
+        "z": "fa85486f10d39407",
+        "minin": "0",
+        "maxin": "20",
+        "minout": "0",
+        "maxout": "100",
+        "action": "scale",
+        "round": false,
+        "property": "payload",
+        "name": "",
+        "x": 280,
+        "y": 620,
+        "wires": [
+            [
+                "55272c66d089c9b5"
+            ]
+        ]
+    },
+    {
+        "id": "ce56dc4841fc21ed",
+        "type": "range",
+        "z": "fa85486f10d39407",
+        "minin": "0",
+        "maxin": "20",
+        "minout": "5",
+        "maxout": "15",
+        "action": "scale",
+        "round": false,
+        "property": "payload",
+        "name": "",
+        "x": 270,
+        "y": 520,
+        "wires": [
+            [
+                "ca6d3d322cac72b5"
+            ]
+        ]
+    },
+    {
+        "id": "277df34aa7984e72",
+        "type": "range",
+        "z": "fa85486f10d39407",
+        "minin": "0",
+        "maxin": "20",
+        "minout": "1",
+        "maxout": "1",
+        "action": "scale",
+        "round": false,
+        "property": "payload",
+        "name": "",
+        "x": 270,
+        "y": 720,
+        "wires": [
+            [
+                "6a54569654a3444b"
+            ]
+        ]
+    },
+    {
+        "id": "ca6d3d322cac72b5",
+        "type": "function",
+        "z": "fa85486f10d39407",
+        "name": "Temperature 2",
+        "func": "\n\n\nconst MAX_TEMP = 15;\nconst MIN_TEMP = 6;\nconst SENSITIVITY = 0.5;\nlet T = msg.payload;\n// Function to update the temperature value\n\n    let newT = Math.floor(Math.random() * (MAX_TEMP - MIN_TEMP + 1)) + MIN_TEMP;\n\n    if (T >= newT - SENSITIVITY) {\n        T -= SENSITIVITY * 0.5;\n    } else if (T <= newT - SENSITIVITY) {\n        T += SENSITIVITY * 0.5;\n    }\n\n    // Update the message payload with the new temperature value\n    msg.payload = T;\n\n\n\n\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 520,
+        "wires": [
+            [
+                "1f8927b0aae92e08",
+                "fef682429e56f337"
+            ]
+        ]
+    },
+    {
+        "id": "185e1da9cd811e70",
+        "type": "delay",
+        "z": "fa85486f10d39407",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 440,
+        "y": 840,
+        "wires": [
+            [
+                "e351652521cb8256"
+            ]
+        ]
+    },
+    {
+        "id": "e669f16f1eaaed4b",
+        "type": "mqtt out",
+        "z": "fa85486f10d39407",
+        "name": "Temperature3",
+        "topic": "Temperature3",
+        "qos": "",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "33738db3942161b9",
+        "x": 660,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "aaf6a9839523ebb6",
+        "type": "function",
+        "z": "fa85486f10d39407",
+        "name": "Humidity 3",
+        "func": "\n\n\nconst MAX = 70;\nconst MIN = 30;\nconst SENSITIVITY = 1;\nlet T = msg.payload;\n// Function to update the temperature value\n\n    let newT = Math.floor(Math.random() * (MAX - MIN + 1)) + MIN;\n\n    if (T >= newT - SENSITIVITY) {\n        T -= SENSITIVITY ;\n    } else if (T <= newT - SENSITIVITY) {\n        T += SENSITIVITY;\n    }\n\n    // Update the message payload with the new temperature value\n    msg.payload = T;\n\n\n\n\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 980,
+        "wires": [
+            [
+                "0a29d18cc9416800",
+                "373d96cc911a1f25"
+            ]
+        ]
+    },
+    {
+        "id": "0a29d18cc9416800",
+        "type": "delay",
+        "z": "fa85486f10d39407",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 440,
+        "y": 940,
+        "wires": [
+            [
+                "aaf6a9839523ebb6"
+            ]
+        ]
+    },
+    {
+        "id": "373d96cc911a1f25",
+        "type": "mqtt out",
+        "z": "fa85486f10d39407",
+        "name": "Humidity3",
+        "topic": "Humidity3",
+        "qos": "",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "33738db3942161b9",
+        "x": 680,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "a2d2b312f59e030f",
+        "type": "function",
+        "z": "fa85486f10d39407",
+        "name": "Pressure3",
+        "func": "\n\n\nconst MAX =1.3;\nconst MIN =0.9;\nconst SENSITIVITY = 0.05;\nlet T = msg.payload;\n// Function to update the temperature value\n\n    let newT = Math.random() * (MAX - MIN )+ MIN;\n\n    if (T >= newT - SENSITIVITY) {\n        T -= SENSITIVITY/5 ;\n    } else if (T <= newT - SENSITIVITY) {\n        T += SENSITIVITY /5;\n    }\n\n    // Update the message payload with the new temperature value\n    msg.payload = T;\n\n\n\n\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 1080,
+        "wires": [
+            [
+                "487866772ab8e9a5",
+                "e9883b78908da70c"
+            ]
+        ]
+    },
+    {
+        "id": "487866772ab8e9a5",
+        "type": "delay",
+        "z": "fa85486f10d39407",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 440,
+        "y": 1040,
+        "wires": [
+            [
+                "a2d2b312f59e030f"
+            ]
+        ]
+    },
+    {
+        "id": "e9883b78908da70c",
+        "type": "mqtt out",
+        "z": "fa85486f10d39407",
+        "name": "Pressure3",
+        "topic": "Pressure3",
+        "qos": "",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "33738db3942161b9",
+        "x": 670,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "8709c18490f6e4c4",
+        "type": "range",
+        "z": "fa85486f10d39407",
+        "minin": "0",
+        "maxin": "20",
+        "minout": "0",
+        "maxout": "100",
+        "action": "scale",
+        "round": false,
+        "property": "payload",
+        "name": "",
+        "x": 280,
+        "y": 980,
+        "wires": [
+            [
+                "aaf6a9839523ebb6"
+            ]
+        ]
+    },
+    {
+        "id": "fe0eadde14f6a542",
+        "type": "range",
+        "z": "fa85486f10d39407",
+        "minin": "0",
+        "maxin": "20",
+        "minout": "5",
+        "maxout": "15",
+        "action": "scale",
+        "round": false,
+        "property": "payload",
+        "name": "",
+        "x": 270,
+        "y": 880,
+        "wires": [
+            [
+                "e351652521cb8256"
+            ]
+        ]
+    },
+    {
+        "id": "54dd6a03d2f1d863",
+        "type": "range",
+        "z": "fa85486f10d39407",
+        "minin": "0",
+        "maxin": "20",
+        "minout": "1",
+        "maxout": "1",
+        "action": "scale",
+        "round": false,
+        "property": "payload",
+        "name": "",
+        "x": 270,
+        "y": 1080,
+        "wires": [
+            [
+                "a2d2b312f59e030f"
+            ]
+        ]
+    },
+    {
+        "id": "e351652521cb8256",
+        "type": "function",
+        "z": "fa85486f10d39407",
+        "name": "Temperature 3",
+        "func": "\n\n\nconst MAX_TEMP = 15;\nconst MIN_TEMP = 6;\nconst SENSITIVITY = 0.5;\nlet T = msg.payload;\n// Function to update the temperature value\n\n    let newT = Math.floor(Math.random() * (MAX_TEMP - MIN_TEMP + 1)) + MIN_TEMP;\n\n    if (T >= newT - SENSITIVITY) {\n        T -= SENSITIVITY * 0.5;\n    } else if (T <= newT - SENSITIVITY) {\n        T += SENSITIVITY * 0.5;\n    }\n\n    // Update the message payload with the new temperature value\n    msg.payload = T;\n\n\n\n\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 880,
+        "wires": [
+            [
+                "185e1da9cd811e70",
+                "e669f16f1eaaed4b"
+            ]
+        ]
+    },
+    {
+        "id": "8d0f1eecd0bcd2b9",
+        "type": "delay",
+        "z": "fa85486f10d39407",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 440,
+        "y": 1200,
+        "wires": [
+            [
+                "2ca011c6a5ad2968"
+            ]
+        ]
+    },
+    {
+        "id": "f5d45930879d566f",
+        "type": "mqtt out",
+        "z": "fa85486f10d39407",
+        "name": "",
+        "topic": "Temperature4",
+        "qos": "",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "33738db3942161b9",
+        "x": 660,
+        "y": 1280,
+        "wires": []
+    },
+    {
+        "id": "4860f230d7da4cd8",
+        "type": "function",
+        "z": "fa85486f10d39407",
+        "name": "Humidity 4",
+        "func": "\n\n\nconst MAX = 70;\nconst MIN = 30;\nconst SENSITIVITY = 1;\nlet T = msg.payload;\n// Function to update the temperature value\n\n    let newT = Math.floor(Math.random() * (MAX - MIN + 1)) + MIN;\n\n    if (T >= newT - SENSITIVITY) {\n        T -= SENSITIVITY ;\n    } else if (T <= newT - SENSITIVITY) {\n        T += SENSITIVITY;\n    }\n\n    // Update the message payload with the new temperature value\n    msg.payload = T;\n\n\n\n\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 1340,
+        "wires": [
+            [
+                "a8705092a2da4298",
+                "862b4ca49697279b"
+            ]
+        ]
+    },
+    {
+        "id": "a8705092a2da4298",
+        "type": "delay",
+        "z": "fa85486f10d39407",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 440,
+        "y": 1300,
+        "wires": [
+            [
+                "4860f230d7da4cd8"
+            ]
+        ]
+    },
+    {
+        "id": "862b4ca49697279b",
+        "type": "mqtt out",
+        "z": "fa85486f10d39407",
+        "name": "",
+        "topic": "Humidity4",
+        "qos": "",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "33738db3942161b9",
+        "x": 680,
+        "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "9b60cad0b34fcdcc",
+        "type": "function",
+        "z": "fa85486f10d39407",
+        "name": "Pressure4",
+        "func": "\n\n\nconst MAX =1.3;\nconst MIN =0.9;\nconst SENSITIVITY = 0.05;\nlet T = msg.payload;\n// Function to update the temperature value\n\n    let newT = Math.random() * (MAX - MIN )+ MIN;\n\n    if (T >= newT - SENSITIVITY) {\n        T -= SENSITIVITY/5 ;\n    } else if (T <= newT - SENSITIVITY) {\n        T += SENSITIVITY /5;\n    }\n\n    // Update the message payload with the new temperature value\n    msg.payload = T;\n\n\n\n\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 1440,
+        "wires": [
+            [
+                "468c75f7ec4d0113",
+                "23b5430288ee2661"
+            ]
+        ]
+    },
+    {
+        "id": "468c75f7ec4d0113",
+        "type": "delay",
+        "z": "fa85486f10d39407",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 440,
+        "y": 1400,
+        "wires": [
+            [
+                "9b60cad0b34fcdcc"
+            ]
+        ]
+    },
+    {
+        "id": "23b5430288ee2661",
+        "type": "mqtt out",
+        "z": "fa85486f10d39407",
+        "name": "Pressure4",
+        "topic": "Pressure4",
+        "qos": "",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "33738db3942161b9",
+        "x": 670,
+        "y": 1400,
+        "wires": []
+    },
+    {
+        "id": "d1c68131d21fb517",
+        "type": "range",
+        "z": "fa85486f10d39407",
+        "minin": "0",
+        "maxin": "20",
+        "minout": "0",
+        "maxout": "100",
+        "action": "scale",
+        "round": false,
+        "property": "payload",
+        "name": "",
+        "x": 280,
+        "y": 1340,
+        "wires": [
+            [
+                "4860f230d7da4cd8"
+            ]
+        ]
+    },
+    {
+        "id": "d340679ef16d50b2",
+        "type": "range",
+        "z": "fa85486f10d39407",
+        "minin": "0",
+        "maxin": "20",
+        "minout": "5",
+        "maxout": "15",
+        "action": "scale",
+        "round": false,
+        "property": "payload",
+        "name": "",
+        "x": 270,
+        "y": 1240,
+        "wires": [
+            [
+                "2ca011c6a5ad2968"
+            ]
+        ]
+    },
+    {
+        "id": "641a59b55be86a43",
+        "type": "range",
+        "z": "fa85486f10d39407",
+        "minin": "0",
+        "maxin": "20",
+        "minout": "1",
+        "maxout": "1",
+        "action": "scale",
+        "round": false,
+        "property": "payload",
+        "name": "",
+        "x": 270,
+        "y": 1440,
+        "wires": [
+            [
+                "9b60cad0b34fcdcc"
+            ]
+        ]
+    },
+    {
+        "id": "2ca011c6a5ad2968",
+        "type": "function",
+        "z": "fa85486f10d39407",
+        "name": "Temperature 4",
+        "func": "\n\n\nconst MAX_TEMP = 15;\nconst MIN_TEMP = 6;\nconst SENSITIVITY = 0.5;\nlet T = msg.payload;\n// Function to update the temperature value\n\n    let newT = Math.floor(Math.random() * (MAX_TEMP - MIN_TEMP + 1)) + MIN_TEMP;\n\n    if (T >= newT - SENSITIVITY) {\n        T -= SENSITIVITY * 0.5;\n    } else if (T <= newT - SENSITIVITY) {\n        T += SENSITIVITY * 0.5;\n    }\n\n    // Update the message payload with the new temperature value\n    msg.payload = T;\n\n\n\n\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 1240,
+        "wires": [
+            [
+                "8d0f1eecd0bcd2b9",
+                "f5d45930879d566f"
+            ]
+        ]
+    },
+    {
+        "id": "2d1da0842155125f",
+        "type": "delay",
+        "z": "fa85486f10d39407",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1060,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "36590e5c969a69bd",
+        "type": "mqtt out",
+        "z": "fa85486f10d39407",
+        "name": "MQTT Out",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "da3b5ee23d1756e0",
+        "x": 1450,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "ec2dd121091a712b",
+        "type": "mqtt in",
+        "z": "fa85486f10d39407",
+        "name": "clim1",
+        "topic": "clim1",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "da3b5ee23d1756e0",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 1710,
+        "y": 300,
+        "wires": [
+            [
+                "aa34065cf151599e"
+            ]
+        ]
+    },
+    {
+        "id": "3220890827dcc09b",
+        "type": "function",
+        "z": "fa85486f10d39407",
+        "name": "Climatiseur 2",
+        "func": "// Assurez-vous que msg.payload est bien un string ou un objet JSON valide\nlet payload = msg.payload;\n\n// Vérifie si le payload est une chaîne de caractères valide (JSON non nécessaire si c'est un simple string)\nif (typeof payload === \"string\") {\n    if (payload === \"marche\") {\n        msg.payload = \"Clim 1 marche\";\n        return msg;\n    } else if (payload === \"ne marche pas\") {\n        msg.payload = \"Clim 1 ne marche pas\";\n        return msg;\n    }\n} \n\n// Si le payload n'est pas un string ou n'est pas valide, on renvoie null pour ne rien faire\nreturn null;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1910,
+        "y": 540,
+        "wires": [
+            [
+                "80e90a1e66f1e068"
+            ]
+        ]
+    },
+    {
+        "id": "52336eb8a9279f4d",
+        "type": "mqtt in",
+        "z": "fa85486f10d39407",
+        "name": "clim2",
+        "topic": "clim2",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "da3b5ee23d1756e0",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 1710,
+        "y": 540,
+        "wires": [
+            [
+                "3220890827dcc09b"
+            ]
+        ]
+    },
+    {
+        "id": "f60a9b705d26a383",
+        "type": "function",
+        "z": "fa85486f10d39407",
+        "name": "Climatiseur 3",
+        "func": "// Assurez-vous que msg.payload est un objet JSON valide\nconst payload = msg.payload;\n\n// Vérifie si le JSON contient les propriétés \"prod\" et \"clim\"\nif (payload ==\"On\") {\n\n\n    msg.payload = \"Clim 3 marche\";\n} else if(payload==\"Off\") {\n        msg.payload = \"Clim 3 ne marche pas\";\n    }\n\n\n\nelse {\n    // Gérer le cas où le payload ne contient pas les propriétés attendues\n    msg.payload = \"Erreur : JSON non valide ou propriétés manquantes\";\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1910,
+        "y": 780,
+        "wires": [
+            [
+                "2ee2352acb5902b8"
+            ]
+        ]
+    },
+    {
+        "id": "1b3016123e4d76d8",
+        "type": "mqtt in",
+        "z": "fa85486f10d39407",
+        "name": "clim3",
+        "topic": "clim3",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "da3b5ee23d1756e0",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 1710,
+        "y": 780,
+        "wires": [
+            [
+                "f60a9b705d26a383"
+            ]
+        ]
+    },
+    {
+        "id": "75f708acaef9b9d9",
+        "type": "function",
+        "z": "fa85486f10d39407",
+        "name": "Climatiseur 4",
+        "func": "// Assurez-vous que msg.payload est un objet JSON valide\nconst payload = msg.payload;\n\n// Vérifie si le JSON contient les propriétés \"prod\" et \"clim\"\nif (payload ==\"On\") {\n\n\n    msg.payload = \"Clim 4 marche\";\n} else if(payload==\"Off\") {\n        msg.payload = \"Clim 4 ne marche pas\";\n    }\n\n\n\nelse {\n    // Gérer le cas où le payload ne contient pas les propriétés attendues\n    msg.payload = \"Erreur : JSON non valide ou propriétés manquantes\";\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1910,
+        "y": 1000,
+        "wires": [
+            [
+                "404b5678d816192d"
+            ]
+        ]
+    },
+    {
+        "id": "ae21be6c2b539130",
+        "type": "mqtt in",
+        "z": "fa85486f10d39407",
+        "name": "clim4",
+        "topic": "clim4",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "da3b5ee23d1756e0",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 1710,
+        "y": 1000,
+        "wires": [
+            [
+                "75f708acaef9b9d9"
+            ]
+        ]
+    },
+    {
+        "id": "d40554d572e40123",
+        "type": "debug",
+        "z": "fa85486f10d39407",
+        "name": "debug 23",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2120,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "80e90a1e66f1e068",
+        "type": "debug",
+        "z": "fa85486f10d39407",
+        "name": "debug 24",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2100,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "2ee2352acb5902b8",
+        "type": "debug",
+        "z": "fa85486f10d39407",
+        "name": "debug 25",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2100,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "404b5678d816192d",
+        "type": "debug",
+        "z": "fa85486f10d39407",
+        "name": "debug 26",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2100,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "0f7ad4a74d62283b",
+        "type": "mqtt in",
+        "z": "fa85486f10d39407",
+        "name": "",
+        "topic": "Temperature1",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "33738db3942161b9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 890,
+        "y": 200,
+        "wires": [
+            [
+                "532277d302ec568c",
+                "6921d0d89e8d210e"
+            ]
+        ]
+    },
+    {
+        "id": "84a3ef0be8f988a1",
+        "type": "mqtt in",
+        "z": "fa85486f10d39407",
+        "name": "",
+        "topic": "Humidity1",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "33738db3942161b9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 880,
+        "y": 260,
+        "wires": [
+            [
+                "532277d302ec568c",
+                "2d9080c941a9b2c0"
+            ]
+        ]
+    },
+    {
+        "id": "2587684d6162d772",
+        "type": "mqtt in",
+        "z": "fa85486f10d39407",
+        "name": "",
+        "topic": "Temperature2",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "33738db3942161b9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 890,
+        "y": 560,
+        "wires": [
+            [
+                "532277d302ec568c",
+                "9f2f9014dc531a19"
+            ]
+        ]
+    },
+    {
+        "id": "efdcad08c42037e8",
+        "type": "mqtt in",
+        "z": "fa85486f10d39407",
+        "name": "",
+        "topic": "Pressure1",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "33738db3942161b9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 880,
+        "y": 320,
+        "wires": [
+            [
+                "532277d302ec568c",
+                "ea70638e24cf406a"
+            ]
+        ]
+    },
+    {
+        "id": "fb04e8b2643ad88c",
+        "type": "mqtt in",
+        "z": "fa85486f10d39407",
+        "name": "",
+        "topic": "Temperature3",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "33738db3942161b9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 910,
+        "y": 920,
+        "wires": [
+            [
+                "532277d302ec568c",
+                "51ca3bda02ecf878"
+            ]
+        ]
+    },
+    {
+        "id": "9479b68b4ea1ae03",
+        "type": "mqtt in",
+        "z": "fa85486f10d39407",
+        "name": "",
+        "topic": "Humidity2",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "33738db3942161b9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 880,
+        "y": 620,
+        "wires": [
+            [
+                "532277d302ec568c",
+                "ac10b98706b6d7eb"
+            ]
+        ]
+    },
+    {
+        "id": "0435598e93accd55",
+        "type": "mqtt in",
+        "z": "fa85486f10d39407",
+        "name": "",
+        "topic": "Temperature4",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "33738db3942161b9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 910,
+        "y": 1280,
+        "wires": [
+            [
+                "532277d302ec568c",
+                "5fabd64aa6979a68"
+            ]
+        ]
+    },
+    {
+        "id": "a4cec14b4f2c68f7",
+        "type": "mqtt in",
+        "z": "fa85486f10d39407",
+        "name": "",
+        "topic": "Pressure3",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "33738db3942161b9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 900,
+        "y": 1040,
+        "wires": [
+            [
+                "532277d302ec568c",
+                "c42e64e756d25eb7"
+            ]
+        ]
+    },
+    {
+        "id": "a5633a56b74eac34",
+        "type": "mqtt in",
+        "z": "fa85486f10d39407",
+        "name": "",
+        "topic": "Humidity4",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "33738db3942161b9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 900,
+        "y": 1340,
+        "wires": [
+            [
+                "532277d302ec568c",
+                "1526fea3b7ca90e1"
+            ]
+        ]
+    },
+    {
+        "id": "eca8b4c47e2938c5",
+        "type": "mqtt in",
+        "z": "fa85486f10d39407",
+        "name": "",
+        "topic": "Pressure4",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "33738db3942161b9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 900,
+        "y": 1400,
+        "wires": [
+            [
+                "532277d302ec568c",
+                "e5a85dd6304d62d4"
+            ]
+        ]
+    },
+    {
+        "id": "cd66a47126432329",
+        "type": "mqtt in",
+        "z": "fa85486f10d39407",
+        "name": "",
+        "topic": "Humidity3",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "33738db3942161b9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 900,
+        "y": 980,
+        "wires": [
+            [
+                "532277d302ec568c",
+                "35544284cc3cf7cc"
+            ]
+        ]
+    },
+    {
+        "id": "0566d08d6cd93cec",
+        "type": "mqtt in",
+        "z": "fa85486f10d39407",
+        "name": "",
+        "topic": "Pressure2",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "33738db3942161b9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 880,
+        "y": 680,
+        "wires": [
+            [
+                "39dc97966725ea20"
+            ]
+        ]
+    },
+    {
+        "id": "6921d0d89e8d210e",
+        "type": "debug",
+        "z": "fa85486f10d39407",
+        "name": "debug 27",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1100,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "2d9080c941a9b2c0",
+        "type": "debug",
+        "z": "fa85486f10d39407",
+        "name": "debug 28",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1100,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "ea70638e24cf406a",
+        "type": "debug",
+        "z": "fa85486f10d39407",
+        "name": "debug 29",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1110,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "9f2f9014dc531a19",
+        "type": "debug",
+        "z": "fa85486f10d39407",
+        "name": "debug 30",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1190,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "ac10b98706b6d7eb",
+        "type": "debug",
+        "z": "fa85486f10d39407",
+        "name": "debug 31",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1210,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "39dc97966725ea20",
+        "type": "debug",
+        "z": "fa85486f10d39407",
+        "name": "debug 32",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1190,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "51ca3bda02ecf878",
+        "type": "debug",
+        "z": "fa85486f10d39407",
+        "name": "debug 33",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1190,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "35544284cc3cf7cc",
+        "type": "debug",
+        "z": "fa85486f10d39407",
+        "name": "debug 34",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1180,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "c42e64e756d25eb7",
+        "type": "debug",
+        "z": "fa85486f10d39407",
+        "name": "debug 35",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1180,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "5fabd64aa6979a68",
+        "type": "debug",
+        "z": "fa85486f10d39407",
+        "name": "debug 36",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1170,
+        "y": 1280,
+        "wires": []
+    },
+    {
+        "id": "1526fea3b7ca90e1",
+        "type": "debug",
+        "z": "fa85486f10d39407",
+        "name": "debug 37",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1160,
+        "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "e5a85dd6304d62d4",
+        "type": "debug",
+        "z": "fa85486f10d39407",
+        "name": "debug 38",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1160,
+        "y": 1400,
+        "wires": []
+    },
+    {
+        "id": "f7965ac19c08edd8",
+        "type": "debug",
+        "z": "fa85486f10d39407",
+        "name": "debug 39",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 770,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "0a119eb55256314e",
+        "type": "function",
+        "z": "fa85486f10d39407",
+        "name": "Prod 1",
+        "func": "// Assurez-vous que msg.payload est un objet JSON valide\nconst payload = msg.payload;\n\n// Vérifie si le JSON contient les propriétés \"prod\" et \"clim\"\nif (payload ==\"On\") {\n\n\n    msg.payload = \"Clim 1 marche\";\n} else if(payload==\"Off\") {\n        msg.payload = \"Clim 1 ne marche pas\";\n    }\n\n\n\nelse {\n    // Gérer le cas où le payload ne contient pas les propriétés attendues\n    msg.payload = \"Erreur : JSON non valide ou propriétés manquantes\";\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1890,
+        "y": 360,
+        "wires": [
+            [
+                "56130179b6980e65"
+            ]
+        ]
+    },
+    {
+        "id": "d0bab03114764aa9",
+        "type": "mqtt in",
+        "z": "fa85486f10d39407",
+        "name": "prod1",
+        "topic": "prod1",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "da3b5ee23d1756e0",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 1710,
+        "y": 360,
+        "wires": [
+            [
+                "0a119eb55256314e"
+            ]
+        ]
+    },
+    {
+        "id": "56130179b6980e65",
+        "type": "debug",
+        "z": "fa85486f10d39407",
+        "name": "debug 40",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2110,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "da1cbc3a491d91c1",
+        "type": "function",
+        "z": "fa85486f10d39407",
+        "name": "Prod 1",
+        "func": "// Assurez-vous que msg.payload est un objet JSON valide\nconst payload = msg.payload;\n\n// Vérifie si le JSON contient les propriétés \"prod\" et \"clim\"\nif (payload ==\"On\") {\n\n\n    msg.payload = \"Clim 1 marche\";\n} else if(payload==\"Off\") {\n        msg.payload = \"Clim 1 ne marche pas\";\n    }\n\n\n\nelse {\n    // Gérer le cas où le payload ne contient pas les propriétés attendues\n    msg.payload = \"Erreur : JSON non valide ou propriétés manquantes\";\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1890,
+        "y": 600,
+        "wires": [
+            [
+                "cc34128f2a92f032"
+            ]
+        ]
+    },
+    {
+        "id": "bf86de4963d682a7",
+        "type": "mqtt in",
+        "z": "fa85486f10d39407",
+        "name": "prod2",
+        "topic": "prod2",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "da3b5ee23d1756e0",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 1710,
+        "y": 600,
+        "wires": [
+            [
+                "da1cbc3a491d91c1"
+            ]
+        ]
+    },
+    {
+        "id": "cc34128f2a92f032",
+        "type": "debug",
+        "z": "fa85486f10d39407",
+        "name": "debug 41",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2110,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "c32ced0532050f05",
+        "type": "function",
+        "z": "fa85486f10d39407",
+        "name": "Prod 1",
+        "func": "// Assurez-vous que msg.payload est un objet JSON valide\nconst payload = msg.payload;\n\n// Vérifie si le JSON contient les propriétés \"prod\" et \"clim\"\nif (payload ==\"On\") {\n\n\n    msg.payload = \"Clim 1 marche\";\n} else if(payload==\"Off\") {\n        msg.payload = \"Clim 1 ne marche pas\";\n    }\n\n\n\nelse {\n    // Gérer le cas où le payload ne contient pas les propriétés attendues\n    msg.payload = \"Erreur : JSON non valide ou propriétés manquantes\";\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1890,
+        "y": 840,
+        "wires": [
+            [
+                "46bffd6a07e6f8cf"
+            ]
+        ]
+    },
+    {
+        "id": "57b8cbfc883fbf7b",
+        "type": "mqtt in",
+        "z": "fa85486f10d39407",
+        "name": "prod3",
+        "topic": "prod3",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "da3b5ee23d1756e0",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 1710,
+        "y": 840,
+        "wires": [
+            [
+                "c32ced0532050f05"
+            ]
+        ]
+    },
+    {
+        "id": "46bffd6a07e6f8cf",
+        "type": "debug",
+        "z": "fa85486f10d39407",
+        "name": "debug 42",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2110,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "59ce75d0ab4631ac",
+        "type": "function",
+        "z": "fa85486f10d39407",
+        "name": "Prod 4",
+        "func": "// Assurez-vous que msg.payload est un objet JSON valide\nconst payload = msg.payload;\n\n// Vérifie si le JSON contient les propriétés \"prod\" et \"clim\"\nif (payload ==\"On\") {\n\n\n    msg.payload = \"Prod 1 marche\";\n} else if(payload==\"Off\") {\n        msg.payload = \"Prod 1 ne marche pas\";\n    }\n\n\n\nelse {\n    // Gérer le cas où le payload ne contient pas les propriétés attendues\n    msg.payload = \"Erreur : JSON non valide ou propriétés manquantes\";\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1890,
+        "y": 1060,
+        "wires": [
+            [
+                "03e7e32beb6bd4bc"
+            ]
+        ]
+    },
+    {
+        "id": "ffcef98483d689d2",
+        "type": "mqtt in",
+        "z": "fa85486f10d39407",
+        "name": "prod4",
+        "topic": "prod4",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "da3b5ee23d1756e0",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 1710,
+        "y": 1060,
+        "wires": [
+            [
+                "59ce75d0ab4631ac"
+            ]
+        ]
+    },
+    {
+        "id": "03e7e32beb6bd4bc",
+        "type": "debug",
+        "z": "fa85486f10d39407",
+        "name": "debug 43",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2110,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "fb55f65ba41c428b",
+        "type": "debug",
+        "z": "fa85486f10d39407",
+        "name": "debug 44",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1430,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "9febb1bb79860dc4",
+        "type": "function",
+        "z": "85eda2fd6510b06d",
+        "name": "function 4",
+        "func": "\nconst MAX_TEMP = 8;\nconst MIN_TEMP = 4;\nconst SENSITIVITY = 0.5;\nlet T = MIN_TEMP;\n// Function to update the temperature value\nfunction updateTemperature() {\n    let newT = Math.floor(Math.random() * (MAX_TEMP - MIN_TEMP + 1)) + MIN_TEMP;\n\n    if (T >= newT - SENSITIVITY) {\n        T -= SENSITIVITY * 0.5;\n    } else if (T <= newT - SENSITIVITY) {\n        T += SENSITIVITY * 0.5;\n    }\n\n    // Update the message payload with the new temperature value\n    msg.payload = T;\n\n   \n}\n\n// Update the temperature every 1 second\nsetInterval(updateTemperature, 1000);\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\n\n\n//let T = Math.floor(Math.random() * (MAX_TEMP - MIN_TEMP + 1)) + MIN_TEMP;",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 260,
+        "wires": [
+            [
+                "fcfd48c0bd76cba8",
+                "3809da6147616378"
+            ]
+        ]
+    },
+    {
+        "id": "fcfd48c0bd76cba8",
+        "type": "delay",
+        "z": "85eda2fd6510b06d",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 520,
+        "y": 140,
+        "wires": [
+            [
+                "9febb1bb79860dc4"
+            ]
+        ]
+    },
+    {
+        "id": "f275891f70b9d173",
+        "type": "inject",
+        "z": "85eda2fd6510b06d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "4",
+        "payloadType": "str",
+        "x": 190,
+        "y": 260,
+        "wires": [
+            [
+                "fcfd48c0bd76cba8",
+                "ad24d0639d6feba7"
+            ]
+        ]
+    },
+    {
+        "id": "3809da6147616378",
+        "type": "debug",
+        "z": "85eda2fd6510b06d",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "3a2f02bdf8a4616c",
+        "type": "debug",
+        "z": "85eda2fd6510b06d",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "ad24d0639d6feba7",
+        "type": "function",
+        "z": "85eda2fd6510b06d",
+        "name": "function 5",
+        "func": "\nconst MAX_TEMP = 8;\nconst MIN_TEMP = 4;\nconst SENSITIVITY = 0.5;\nlet T = MIN_TEMP;\nsetInterval(updateTemperature, 1000);\n// Function to update the temperature value\nfunction updateTemperature() {\n    let newT = Math.floor(Math.random() * (MAX_TEMP - MIN_TEMP + 1)) + MIN_TEMP;\n\n    if (T >= newT - SENSITIVITY) {\n        T -= SENSITIVITY * 0.5;\n    } else if (T <= newT - SENSITIVITY) {\n        T += SENSITIVITY * 0.5;\n    }\n\n    // Update the message payload with the new temperature value\n    msg.payload = T;\n\n\n}\n\n// Update the temperature every 1 second\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 380,
+        "wires": [
+            [
+                "3a2f02bdf8a4616c"
+            ]
+        ]
+    }
+]
